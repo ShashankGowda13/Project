@@ -101,13 +101,16 @@ if(!eventId){
 
 
       try {
-       const updatedEvent = await updateEvent ({
-        userId,
-        event: { ...values, imageUrl: uploadedImageUrl,_id:eventId},
-        path:`/events/${eventId}`
-          
-   
-        })
+        const updatedEvent = await updateEvent({
+          userId,
+          event: { 
+              ...values,
+              imageUrl: uploadedImageUrl,
+              _id: eventId,
+              url: values.url || '' // Provide a default value if values.url is undefined
+          },
+          path: `/events/${eventId}`
+      });
 
         if( updatedEvent) {
           form.reset();
