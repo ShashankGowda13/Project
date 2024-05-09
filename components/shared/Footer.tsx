@@ -14,7 +14,7 @@ const Footer = () => {
           />
         </Link>
 
-        <p>2023 Paurohitya. All Rights reserved. created By shashank</p>
+        <p>2023 Paurohitya. All Rights reserved. created By Team:PAUROHITYA</p>
       </div>
     </footer>
   )
